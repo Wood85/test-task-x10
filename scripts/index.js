@@ -13,54 +13,119 @@ const items = [
     category: "Marketing",
     price: "100",
     author: "Jerome Bell",
+    img: "./assets/images/8.webp",
   },
   {
     title: "Prduct Management Fundamentals",
     category: "Management",
     price: "480",
     author: "Marvin McKinney",
+    img: "./assets/images/3.webp",
   },
   {
-    title: "HR  Management and Analytics",
+    title: "HR\u00A0\u00A0Management and Analytics",
     category: "HR & Recruting",
     price: "200",
     author: "Leslie Alexander Li",
+    img: "./assets/images/2.webp",
   },
   {
     title: "Brand Management & PR Communications",
     category: "Marketing",
     price: "530",
     author: "Kristin Watson",
+    img: "./assets/images/9.webp",
   },
   {
     title: "Graphic Design Basic",
     category: "Design",
     price: "500",
     author: "by Guy Hawkins",
+    img: "./assets/images/1.webp",
   },
   {
     title: "Business Development Management",
     category: "Management",
     price: "400",
     author: "Dianne Russell",
+    img: "./assets/images/7.webp",
   },
   {
     title: "Highload Software Architecture",
     category: "Development",
     price: "600",
     author: "Brooklyn Simmons",
+    img: "./assets/images/4.webp",
   },
   {
     title: "Human Resources – Selection and Recruitment",
     category: "HR & Recruting",
     price: "150",
     author: "Kathryn Murphy",
+    img: "./assets/images/6.webp",
   },
   {
     title: "User Experience. Human-centered Design",
     category: "Design",
     price: "240",
     author: "Cody Fisher",
+    img: "./assets/images/5.webp",
+  },
+  {
+    title: "Brand Management & PR Communications",
+    category: "Marketing",
+    price: "530",
+    author: "Kristin Watson",
+    img: "./assets/images/9.webp",
+  },
+  {
+    title: "Human Resources – Selection and Recruitment",
+    category: "HR & Recruting",
+    price: "150",
+    author: "Kathryn Murphy",
+    img: "./assets/images/6.webp",
+  },
+  {
+    title: "Business Development Management",
+    category: "Management",
+    price: "400",
+    author: "Dianne Russell",
+    img: "./assets/images/7.webp",
+  },
+  {
+    title: "Graphic Design Basic",
+    category: "Design",
+    price: "500",
+    author: "by Guy Hawkins",
+    img: "./assets/images/1.webp",
+  },
+  {
+    title: "Business Development Management",
+    category: "HR & Recruting",
+    price: "400",
+    author: "Dianne Russell",
+    img: "./assets/images/7.webp",
+  },
+  {
+    title: "Highload Software Architecture",
+    category: "Design",
+    price: "600",
+    author: "Brooklyn Simmons",
+    img: "./assets/images/4.webp",
+  },
+  {
+    title: "The Ultimate Google Ads Training Course",
+    category: "Marketing",
+    price: "100",
+    author: "Jerome Bell",
+    img: "./assets/images/8.webp",
+  },
+  {
+    title: "Human Resources – Selection and Recruitment",
+    category: "HR & Recruting",
+    price: "150",
+    author: "Kathryn Murphy",
+    img: "./assets/images/6.webp",
   },
 ];
 
@@ -138,10 +203,21 @@ function renderCardsPage() {
 
   itemsToShow.forEach((item) => {
     const node = template.content.cloneNode(true);
-    node.querySelector(".course__category").textContent = item.category;
+    const category = node.querySelector(".course__category");
+    category.textContent = item.category;
+
+    if (item.category === "HR & Recruting") {
+      category.classList.add(`course__category_recruting`);
+    } else {
+      category.classList.add(`course__category_${item.category.toLowerCase()}`);
+    }
     node.querySelector(".course__title").textContent = item.title;
-    node.querySelector(".course__price").textContent = item.price;
+    node.querySelector(".course__price").textContent = `$${item.price}`;
     node.querySelector(".course__author").textContent = `by ${item.author}`;
+    const img = node.querySelector(".course__image");
+    img.src = item.img;
+    img.alt = item.title;
+
     container.appendChild(node);
   });
 
