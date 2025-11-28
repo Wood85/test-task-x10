@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Courses</title>
+    <meta name="description" content="Test task" />
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <div class="courses">
+      <div class="courses__page-background page-background">
+        <img class="page-background__image" src="#" alt="background" />
+      </div>
+      <header class="courses__header header">
+        <h3 class="header__subtitle">Enjoy your studying!</h3>
+        <h1 class="header__subtitle" role="heading">Our online courses</h1>
+      </header>
+
+      <main id="main" role="main" class="courses__content content">
+        <form class="content__panel filters">
+          <div class="filters__tabs tabs" role="tablist">
+            <template class="tabs__btn-template">
+              <button class="tabs__button" data-category="" role="tab"></button>
+            </template>
+          </div>
+
+          <div class="filters__search search" role="search">
+            <input
+              class="search__input"
+              type="search"
+              id="search"
+              name="search"
+            />
+          </div>
+        </form>
+
+        <div class="content__cards cards">
+          <template id="cards__card-template">
+            <div class="cards__course course">
+              <img src="" alt="" />
+              <div class="course__category"></div>
+              <h3 class="course__title"></h3>
+              <div class="course__info info">
+                <div class="course__price"></div>
+                <div class="info__separator"></div>
+                <div class="course__author"></div>
+              </div>
+            </div>
+          </template>
+        </div>
+
+        <button class="content__load">Load more</button>
+      </main>
+    </div>
+
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
