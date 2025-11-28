@@ -5,55 +5,67 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Courses</title>
     <meta name="description" content="Test task" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles/index.css" />
   </head>
   <body>
+    <template class="tabs__btn-template">
+      <button class="tabs__button" data-category="" role="tab">
+        <div class="tabs__button-count"></div>
+      </button>
+    </template>
+
+    <template class="cards__card-template">
+      <div class="cards__course course">
+        <img class="course__image" alt="" />
+        <div class="course__category"></div>
+        <h3 class="course__title"></h3>
+        <div class="course__info info">
+          <div class="course__price"></div>
+          <div class="info__separator"></div>
+          <div class="course__author"></div>
+        </div>
+      </div>
+    </template>
+
     <div class="courses">
       <div class="courses__page-background page-background">
         <img class="page-background__image" src="#" alt="background" />
       </div>
-      <header class="courses__header header">
-        <h3 class="header__subtitle">Enjoy your studying!</h3>
-        <h1 class="header__subtitle" role="heading">Our online courses</h1>
-      </header>
+      <div class="courses__container">
+        <header class="courses__header header">
+          <h6 class="header__subtitle">Enjoy your studying!</h6>
+          <h1 class="header__title" role="heading">Our online courses</h1>
+        </header>
 
-      <main id="main" role="main" class="courses__content content">
-        <form class="content__panel filters">
-          <div class="filters__tabs tabs" role="tablist">
-            <template class="tabs__btn-template">
-              <button class="tabs__button" data-category="" role="tab"></button>
-            </template>
+        <main id="main" role="main" class="courses__content content">
+          <div class="content__panel filters">
+            <div class="filters__tabs tabs" role="tablist"></div>
+
+            <form class="filters__search search" role="search">
+              <input
+                class="search__input"
+                type="text"
+                id="search"
+                name="search"
+                placeholder="Search course..."
+              />
+              <button type="submit" class="search__btn">
+                <img src="./assets/icons/search.svg" alt="search" />
+              </button>
+            </form>
           </div>
 
-          <div class="filters__search search" role="search">
-            <input
-              class="search__input"
-              type="search"
-              id="search"
-              name="search"
-            />
-          </div>
-        </form>
+          <div class="content__cards cards"></div>
 
-        <div class="content__cards cards">
-          <template id="cards__card-template">
-            <div class="cards__course course">
-              <img src="" alt="" />
-              <div class="course__category"></div>
-              <h3 class="course__title"></h3>
-              <div class="course__info info">
-                <div class="course__price"></div>
-                <div class="info__separator"></div>
-                <div class="course__author"></div>
-              </div>
-            </div>
-          </template>
-        </div>
-
-        <button class="content__load">Load more</button>
-      </main>
+          <button class="content__load-more">Load more</button>
+        </main>
+      </div>
     </div>
-
+    <script src="scripts/data.js"></script>
     <script src="scripts/index.js"></script>
   </body>
 </html>

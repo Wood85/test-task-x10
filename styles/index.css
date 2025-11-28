@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.active {
+  background-color: brown;
+}
+
+.courses {
+}
+
+.courses__page-background {
+}
+
+.page-background {
+}
+
+.page-background__image {
+}
+
+.courses__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  width: 100%s;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.header__subtitle {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.header__title {
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 130%;
+  letter-spacing: 0%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content__panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filters__tabs {
+}
+
+.tabs {
+}
+
+.tabs__btn-template {
+}
+
+.tabs__button {
+}
+
+.filters__search {
+}
+
+.search {
+}
+
+.search__input {
+}
+
+.content__cards {
+}
+
+.cards {
+}
+
+.cards__card-template {
+}
+
+.cards__course {
+}
+
+.course {
+}
+
+.course__image {
+}
+
+.course__category {
+}
+
+.course__title {
+}
+
+.course__info {
+}
+
+.info {
+}
+
+.course__price {
+}
+
+.info__separator {
+}
+
+.course__author {
+}
+
+.content__load {
+}
