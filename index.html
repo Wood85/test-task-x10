@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Courses</title>
+    <meta name="description" content="Test task" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <template class="tabs__btn-template">
+      <button class="tabs__button" data-category="" role="tab">
+        <div class="tabs__button-count"></div>
+      </button>
+    </template>
+
+    <template class="cards__card-template">
+      <div class="cards__course course">
+        <img class="course__image" alt="course__image" />
+        <div class="course__content">
+          <div class="course__category"></div>
+          <h3 class="course__title"></h3>
+          <div class="course__info info">
+            <div class="course__price"></div>
+            <div class="info__separator"></div>
+            <div class="course__author"></div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <div class="courses">
+      <div class="courses__container">
+        <header class="courses__header header">
+          <h6 class="header__subtitle">Enjoy your studying!</h6>
+          <h1 class="header__title" role="heading">Our online courses</h1>
+        </header>
+
+        <main id="main" role="main" class="courses__content content">
+          <div class="content__panel filters">
+            <div class="filters__tabs tabs" role="tablist"></div>
+
+            <form class="filters__search search" role="search">
+              <div class="search__input-container">
+                <input
+                  class="search__input"
+                  type="text"
+                  id="search"
+                  name="search"
+                  placeholder="Search course..."
+                />
+                <button type="submit" class="search__btn">
+                  <img
+                    class="search__img"
+                    src="./assets/icons/search.svg"
+                    alt="search"
+                  />
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="content__cards cards"></div>
+
+          <button class="content__load-more">
+            <div class="content__load-more-container">
+              <img
+                class="content__load-more-img"
+                src="./assets/icons/convert.svg"
+                alt="load"
+              />
+              <span class="content__load-more-text">Load more</span>
+            </div>
+          </button>
+        </main>
+      </div>
+    </div>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
